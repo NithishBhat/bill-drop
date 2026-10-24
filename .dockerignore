@@ -1,0 +1,9 @@
+.git
+.venv
+.kiro
+__pycache__
+*.pyc
+infra
+kb-docs
+.env
+.streamlit/secrets.toml

@@ -81,6 +81,7 @@ SAVINGS_SCHEMA = {
 SAVINGS_PROMPT = """You are an energy bill coach for Massachusetts households.
 Using ONLY the reference documents below, recommend 2-4 ways this household can save money. Use the save_recommendations tool.
 - supply_switch: a cheaper supply plan available to this utility's customers. Give its exact $/kWh rate from the documents; only suggest it if cheaper than the current supply rate. Mention eligibility limits (e.g. BCCE is only for Eversource customers in the City of Boston).
+  For competitive supplier offers (Energy Switch MA), also mention cancellation fees, automatic renewal and new-customer-only terms.
 - rebate: Mass Save offers that fit this household's usage pattern (e.g. high winter usage -> heat pumps / insulation).
 - Never invent rates, rebate amounts or links that aren't in the documents.
 - In "why", do NOT state yearly dollar savings; the app calculates and shows those itself.
@@ -159,7 +160,7 @@ def _winter_vs_summer(bill):
             winter.append(m["kwh"])
         elif month in (6, 7, 8):
             summer.append(m["kwh"])
-    if not winter or not summer:
+    if not winter or not summer or sum(summer) == 0:
         return None
     return (sum(winter) / len(winter)) / (sum(summer) / len(summer))
 
@@ -186,6 +187,7 @@ def find_savings(bill):
     queries = [
         f"cheaper electricity supply plan rates for {utility} residential customers",
         f"{utility} Basic Service residential supply rate",
+        f"Energy Switch MA competitive supplier offers for {utility} residential customers",
         "Mass Save rebates heat pumps insulation for high winter electricity usage"
         if ratio and ratio > 1.3 else "Mass Save rebates smart thermostat heat pump water heater",
     ]
@@ -222,7 +224,8 @@ def find_savings(bill):
                 continue  # can't verify it's cheaper, so don't show it
             savings = (current_rate - new_rate) * yearly_kwh
         else:
-            savings = idea.get("estimated_yearly_savings") or 0
+            # The model's estimate; never show a negative "saving".
+            savings = max(idea.get("estimated_yearly_savings") or 0, 0)
         rec = {
             "title": idea["title"],
             "why": idea["why"],
@@ -247,17 +250,26 @@ def find_savings(bill):
 
 SOURCE_NAMES = {
     "ma-electric-supply-rates-2026.md": "MA electricity supply rates (2026)",
+    "ma-supply-rates-eversource-2026.md": "Eversource Basic Service rates (2026)",
+    "ma-supply-rates-nationalgrid-2026.md": "National Grid Basic Service rates (2026)",
+    "ma-supply-rates-bcce-2026.md": "City of Boston: BCCE rates (2026)",
+    "ma-supply-switch-savings.md": "How supply-switch savings are estimated",
     "masssave-rebates-2026.md": "Mass Save rebates (2026)",
     "eversource-ma-rates-summary.txt": "Eversource MA rate summary",
     "nationalgrid-ma-basic-service-aug2026.txt": "National Grid Basic Service rates",
     "boston-bcce.txt": "City of Boston: BCCE program page",
     "boston-bcce-march-2026-letter.txt": "City of Boston: BCCE notice (Mar 2026)",
 }
+# Energy Switch MA topic files (scripts/fetch_energyswitch.py) all cite the same source.
+SOURCE_NAMES.update({f"energyswitchma-02130-{t}.md": "Energy Switch MA (MA DPU): supplier offers"
+                     for t in ("lowest-rates", "no-cancellation-fee", "100-percent-renewable", "all-offers")})
 
 ASK_PROMPT = """You are a friendly Massachusetts energy bill coach. Answer the question in 2-5 short sentences
 using ONLY the reference documents below (and the user's bill facts, if given). If the documents don't
 cover it, say so and suggest calling Mass Save at 866-527-7283. Never invent rates or rebate amounts.
 If the bill facts include the app's savings figures, quote those exactly instead of doing your own math.
+If the question sets a limit (e.g. "below 16 cents", "no cancellation fee"), check every item against it and
+list only the items that meet it.
 
 {bill}Reference documents:
 {docs}
@@ -268,7 +280,8 @@ Question: {question}"""
 def ask(question, bill=None, savings=None):
     """Answer a free-form question from the Knowledge Base, optionally using the user's bill
     and the find_savings result (so the chat quotes the same numbers the page shows)."""
-    hits = _search_kb(question, n=5)
+    # 8 chunks so list-style questions ("which suppliers...") see the whole offer summary.
+    hits = _search_kb(question, n=8)
     docs = "\n\n---\n\n".join(text for text, _ in hits)
     bill_facts = ""
     if bill:

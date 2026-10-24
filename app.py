@@ -97,7 +97,24 @@ if st.session_state.result:
                 st.link_button("Learn more / sign up", rec["link"])
 
     with st.expander("What we read from your bill"):
-        st.json(bill)
+        def shown(value, fmt="{}"):
+            return "Not shown on bill" if value is None else fmt.format(value)
+
+        details = [
+            ("Utility", shown(bill["utility"])),
+            ("Account number", shown(bill["account_number"])),
+            ("Billing period", f"{shown(bill['billing_start'])} to {shown(bill['billing_end'])}"),
+            ("Electricity used", shown(bill["kwh_used"], "{:,.0f} kWh")),
+            ("Amount due", shown(bill["total_cost"], "${:,.2f}")),
+            ("Supply rate", shown(bill["supply_rate_per_kwh"], "${:.5f}/kWh")),
+            ("Supplier", shown(bill["supplier"])),
+        ]
+        st.dataframe([{"Item": k, "From your bill": v} for k, v in details],
+                     hide_index=True, width="stretch")
+        if history:
+            st.caption("Monthly usage we read from the chart")
+            st.dataframe([{"Month": m["month"], "kWh": m["kwh"]} for m in history],
+                         hide_index=True, width="stretch")
 
 # ---------------------------------------------------------------- chat
 st.divider()

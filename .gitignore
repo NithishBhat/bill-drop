@@ -5,3 +5,9 @@ __pycache__/
 # Never commit AWS keys
 .streamlit/secrets.toml
 .env
+# Terraform
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.*
+infra/build/
+infra/*.tfplan

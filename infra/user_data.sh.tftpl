@@ -1,0 +1,17 @@
+#!/bin/bash
+# Boot script: install Docker, fetch the app bundle from S3, build and run the container.
+# Logs: /var/log/cloud-init-output.log
+set -euxo pipefail
+
+dnf install -y docker unzip
+systemctl enable --now docker
+
+mkdir -p /opt/app
+cd /opt/app
+aws s3 cp "s3://${bucket}/${key}" app.zip --region "${region}"
+unzip -o app.zip
+
+docker build -t energy-coach .
+docker rm -f energy-coach || true
+docker run -d --name energy-coach --restart unless-stopped \
+  -p 80:8501 -e AWS_REGION="${region}" energy-coach
