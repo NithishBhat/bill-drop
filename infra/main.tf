@@ -138,12 +138,12 @@ resource "aws_security_group" "app" {
 }
 
 # ---------------------------------------------------------------- instance
-data "aws_ssm_parameter" "al2023_arm64" {
-  name = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-arm64"
+data "aws_ssm_parameter" "al2023" {
+  name = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-${var.arch}"
 }
 
 resource "aws_instance" "app" {
-  ami                    = data.aws_ssm_parameter.al2023_arm64.value
+  ami                    = data.aws_ssm_parameter.al2023.value
   instance_type          = var.instance_type
   iam_instance_profile   = aws_iam_instance_profile.app.name
   vpc_security_group_ids = [aws_security_group.app.id]

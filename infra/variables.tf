@@ -1,7 +1,7 @@
 variable "name" {
   description = "Name prefix for all resources."
   type        = string
-  default     = "energy-coach"
+  default     = "bill-drop"
 }
 
 variable "region" {
@@ -11,9 +11,15 @@ variable "region" {
 }
 
 variable "instance_type" {
-  description = "ARM (Graviton) instance; 2 vCPU / 2 GB handles ~10 concurrent users."
+  description = "Largest Free Tier plan type: 2 vCPU / 4 GB compute-optimized (was t4g.small). Must match arch."
   type        = string
-  default     = "t4g.small"
+  default     = "c7i-flex.large"
+}
+
+variable "arch" {
+  description = "CPU architecture of instance_type: x86_64 or arm64 (picks the Amazon Linux AMI)."
+  type        = string
+  default     = "x86_64"
 }
 
 variable "allowed_cidrs" {

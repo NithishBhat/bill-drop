@@ -11,7 +11,7 @@ cd /opt/app
 aws s3 cp "s3://${bucket}/${key}" app.zip --region "${region}"
 unzip -o app.zip
 
-docker build -t energy-coach .
-docker rm -f energy-coach || true
-docker run -d --name energy-coach --restart unless-stopped \
-  -p 80:8501 -e AWS_REGION="${region}" energy-coach
+docker build -t bill-drop .
+docker rm -f bill-drop || true
+docker run -d --name bill-drop --restart unless-stopped \
+  -p 80:8501 -e AWS_REGION="${region}" bill-drop

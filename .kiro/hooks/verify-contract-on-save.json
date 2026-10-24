@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Verify backend JSON contract on save",
+      "trigger": "PostFileSave",
+      "description": "Whenever backend.py or app.py is saved, check that analyze_bill, find_savings, ask and the hardcoded fallback dicts return exactly the contract keys, and that app.py only reads keys the backend provides.",
+      "matcher": "(backend|app)\\.py$",
+      "action": {
+        "type": "command",
+        "command": "python .kiro/hooks/verify_contract.py",
+        "timeout": 60
+      }
+    }
+  ]
+}

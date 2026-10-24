@@ -8,6 +8,7 @@ Contract with the frontend (don't rename keys without telling your teammate):
 import json
 import os
 import sys
+from concurrent.futures import ThreadPoolExecutor
 
 import boto3
 
@@ -202,9 +203,12 @@ def find_savings(bill):
         "Mass Save rebates heat pumps insulation for high winter electricity usage"
         if ratio and ratio > 1.3 else "Mass Save rebates smart thermostat heat pump water heater",
     ]
+    # Run the KB searches at the same time instead of one after another.
+    with ThreadPoolExecutor(max_workers=len(queries)) as pool:
+        results = list(pool.map(_search_kb, queries))
     docs = []
-    for q in queries:
-        for chunk, _ in _search_kb(q):
+    for hits in results:
+        for chunk, _ in hits:
             if chunk not in docs:
                 docs.append(chunk)
 

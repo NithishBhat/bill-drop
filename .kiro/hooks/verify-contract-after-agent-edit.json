@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Verify backend JSON contract after Kiro edits",
+      "trigger": "PostToolUse",
+      "description": "After Kiro writes or edits a file, re-run the contract check so an agent change can't silently rename a key the Streamlit UI depends on.",
+      "matcher": "^(fs_write|str_replace|fs_append|smart_relocate|semantic_rename)$",
+      "action": {
+        "type": "command",
+        "command": "python .kiro/hooks/verify_contract.py",
+        "timeout": 60
+      }
+    }
+  ]
+}
