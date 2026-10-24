@@ -1,0 +1,129 @@
+"""Energy Bill Coach: upload a Massachusetts electricity bill, see how to save.
+
+Run with:  streamlit run app.py
+"""
+from pathlib import Path
+
+import streamlit as st
+
+from backend import ask, find_savings, read_bill
+
+SAMPLE_BILL = Path(__file__).parent / "sample_bills" / "sample_eversource_bill.png"
+
+st.set_page_config(page_title="Energy Bill Coach", page_icon="⚡", layout="centered")
+
+
+# Cached so Streamlit reruns (every click) don't re-bill us for the same upload.
+@st.cache_data(show_spinner=False)
+def analyze(file_bytes):
+    bill = read_bill(file_bytes)
+    return bill, find_savings(bill)
+
+
+def money(x):
+    return "—" if x is None else f"${x:,.0f}"
+
+
+def plain(text):
+    """Escape $ so Streamlit doesn't render model text like '$250 to $500' as LaTeX math."""
+    return text.replace("$", "\\$")
+
+
+st.session_state.setdefault("result", None)
+st.session_state.setdefault("chat", [])
+
+st.title("⚡ Energy Bill Coach")
+st.write("Upload your Massachusetts electric bill. We'll read it, find a cheaper supply plan "
+         "and the Mass Save rebates that fit your home, and show what you'd save per year.")
+
+# ---------------------------------------------------------------- upload
+uploaded = st.file_uploader("Your electric bill (photo, screenshot or PDF)",
+                            type=["png", "jpg", "jpeg", "webp", "pdf"])
+col_a, col_b = st.columns(2)
+run = col_a.button("Analyze my bill", type="primary", disabled=uploaded is None,
+                   use_container_width=True)
+sample = col_b.button("Try a sample bill", use_container_width=True)
+
+file_bytes = None
+if run and uploaded is not None:
+    file_bytes = uploaded.getvalue()
+elif sample:
+    file_bytes = SAMPLE_BILL.read_bytes()
+
+if file_bytes:
+    try:
+        with st.spinner("Reading your bill and checking Massachusetts rates and rebates..."):
+            st.session_state.result = analyze(file_bytes)
+        st.session_state.chat = []  # new bill, new conversation
+    except ValueError as e:  # unsupported file type
+        st.error(str(e))
+    except Exception as e:
+        st.error(f"Something went wrong analyzing the bill: {e}")
+
+# ---------------------------------------------------------------- results
+if st.session_state.result:
+    bill, savings = st.session_state.result
+    st.divider()
+    st.subheader("Your bill")
+    st.caption(f"{bill['utility'] or 'Unknown utility'} · Supplier: {bill['supplier'] or 'unknown'} · "
+               f"{bill['billing_start'] or '?'} to {bill['billing_end'] or '?'}")
+
+    m1, m2, m3 = st.columns(3)
+    rate = bill["supply_rate_per_kwh"]
+    m1.metric("Supply rate", f"${rate:.4f}/kWh" if rate else "—")
+    m2.metric("Used this bill", f"{bill['kwh_used']:,.0f} kWh" if bill["kwh_used"] else "—")
+    m3.metric("Est. yearly cost", money(savings["yearly_cost_now"]))
+
+    history = bill["monthly_kwh_history"]
+    if history:
+        st.caption("Monthly usage (kWh)")
+        st.bar_chart({m["month"]: m["kwh"] for m in history}, height=220)
+
+    st.subheader("How you can save")
+    total = savings["total_yearly_savings"]
+    if total:
+        st.success(f"### You could save about **{money(total)} per year**")
+
+    if not savings["recommendations"]:
+        st.info("You're already on a good rate. Check back when rates change in February and August.")
+    for rec in savings["recommendations"]:
+        with st.container(border=True):
+            left, right = st.columns([3, 1])
+            left.markdown(f"**{rec['title']}**")
+            right.markdown(f"**{money(rec['yearly_savings'])}/yr**" if rec["yearly_savings"]
+                           else "_Savings vary_")
+            st.markdown(plain(rec["why"]))
+            if rec["link"]:
+                st.link_button("Learn more / sign up", rec["link"])
+
+    with st.expander("What we read from your bill"):
+        st.json(bill)
+
+# ---------------------------------------------------------------- chat
+st.divider()
+st.subheader("💬 Ask the coach")
+st.caption("Answers come only from Mass Save, utility and City of Boston documents.")
+
+for msg in st.session_state.chat:
+    with st.chat_message(msg["role"]):
+        st.markdown(plain(msg["content"]))
+        if msg.get("sources"):
+            st.caption("Sources: " + ", ".join(msg["sources"]))
+
+question = st.chat_input("e.g. What rebates can I get for a heat pump?")
+if question:
+    st.session_state.chat.append({"role": "user", "content": question})
+    with st.chat_message("user"):
+        st.markdown(plain(question))
+    with st.chat_message("assistant"):
+        try:
+            with st.spinner("Looking it up..."):
+                bill, savings = st.session_state.result or (None, None)
+                reply = ask(question, bill, savings)
+        except Exception as e:
+            reply = {"answer": f"Sorry, I couldn't answer that right now ({e}).", "sources": []}
+        st.markdown(plain(reply["answer"]))
+        if reply["sources"]:
+            st.caption("Sources: " + ", ".join(reply["sources"]))
+    st.session_state.chat.append({"role": "assistant", "content": reply["answer"],
+                                  "sources": reply["sources"]})

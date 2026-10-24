@@ -3,6 +3,7 @@
 Contract with the frontend (don't rename keys without telling your teammate):
     read_bill(image_bytes) -> bill dict (see BILL_SCHEMA)
     find_savings(bill)     -> {"yearly_cost_now", "total_yearly_savings", "recommendations": [...]}
+    ask(question, bill, savings) -> {"answer": str, "sources": [str]}
 """
 import json
 import os
@@ -82,6 +83,7 @@ Using ONLY the reference documents below, recommend 2-4 ways this household can 
 - supply_switch: a cheaper supply plan available to this utility's customers. Give its exact $/kWh rate from the documents; only suggest it if cheaper than the current supply rate. Mention eligibility limits (e.g. BCCE is only for Eversource customers in the City of Boston).
 - rebate: Mass Save offers that fit this household's usage pattern (e.g. high winter usage -> heat pumps / insulation).
 - Never invent rates, rebate amounts or links that aren't in the documents.
+- In "why", do NOT state yearly dollar savings; the app calculates and shows those itself.
 
 Bill facts:
 {facts}
@@ -163,12 +165,14 @@ def _winter_vs_summer(bill):
 
 
 def _search_kb(query, n=4):
+    """Return [(chunk_text, source_file_name), ...] from the Knowledge Base."""
     resp = _kb.retrieve(
         knowledgeBaseId=KNOWLEDGE_BASE_ID,
         retrievalQuery={"text": query},
         retrievalConfiguration={"vectorSearchConfiguration": {"numberOfResults": n}},
     )
-    return [r["content"]["text"] for r in resp["retrievalResults"]]
+    return [(r["content"]["text"], r["location"]["s3Location"]["uri"].rsplit("/", 1)[-1])
+            for r in resp["retrievalResults"]]
 
 
 def find_savings(bill):
@@ -187,7 +191,7 @@ def find_savings(bill):
     ]
     docs = []
     for q in queries:
-        for chunk in _search_kb(q):
+        for chunk, _ in _search_kb(q):
             if chunk not in docs:
                 docs.append(chunk)
 
@@ -239,6 +243,60 @@ def find_savings(bill):
         "total_yearly_savings": round(sum(r["yearly_savings"] for r in recommendations), 2),
         "recommendations": recommendations,
     }
+
+
+SOURCE_NAMES = {
+    "ma-electric-supply-rates-2026.md": "MA electricity supply rates (2026)",
+    "masssave-rebates-2026.md": "Mass Save rebates (2026)",
+    "eversource-ma-rates-summary.txt": "Eversource MA rate summary",
+    "nationalgrid-ma-basic-service-aug2026.txt": "National Grid Basic Service rates",
+    "boston-bcce.txt": "City of Boston: BCCE program page",
+    "boston-bcce-march-2026-letter.txt": "City of Boston: BCCE notice (Mar 2026)",
+}
+
+ASK_PROMPT = """You are a friendly Massachusetts energy bill coach. Answer the question in 2-5 short sentences
+using ONLY the reference documents below (and the user's bill facts, if given). If the documents don't
+cover it, say so and suggest calling Mass Save at 866-527-7283. Never invent rates or rebate amounts.
+If the bill facts include the app's savings figures, quote those exactly instead of doing your own math.
+
+{bill}Reference documents:
+{docs}
+
+Question: {question}"""
+
+
+def ask(question, bill=None, savings=None):
+    """Answer a free-form question from the Knowledge Base, optionally using the user's bill
+    and the find_savings result (so the chat quotes the same numbers the page shows)."""
+    hits = _search_kb(question, n=5)
+    docs = "\n\n---\n\n".join(text for text, _ in hits)
+    bill_facts = ""
+    if bill:
+        keys = ("utility", "supplier", "supply_rate_per_kwh", "kwh_used", "total_cost")
+        facts = {k: bill.get(k) for k in keys}
+        if savings:
+            facts["estimated_yearly_kwh"] = _yearly_kwh(bill)
+            facts["app_savings_figures"] = [
+                {"title": r["title"], "yearly_savings": r["yearly_savings"]}
+                for r in savings["recommendations"]
+            ]
+        bill_facts = "User's bill facts:\n" + json.dumps(facts) + "\n\n"
+
+    resp = _bedrock.converse(
+        modelId=MODEL_ID,
+        messages=[{"role": "user", "content": [{"text": ASK_PROMPT.format(
+            bill=bill_facts, docs=docs, question=question)}]}],
+        inferenceConfig={"maxTokens": 600, "temperature": 0},
+    )
+    usage = resp["usage"]
+    print(f"[ask] {usage['inputTokens']} in / {usage['outputTokens']} out tokens", file=sys.stderr)
+
+    sources = []
+    for _, file_name in hits:
+        name = SOURCE_NAMES.get(file_name, file_name)
+        if name not in sources:
+            sources.append(name)
+    return {"answer": resp["output"]["message"]["content"][0]["text"], "sources": sources}
 
 
 if __name__ == "__main__":
