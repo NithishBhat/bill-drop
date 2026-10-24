@@ -189,18 +189,23 @@ st.divider()
 st.subheader("💬 Ask the coach")
 st.caption("Answers come only from Mass Save, utility and City of Boston documents.")
 
-for msg in st.session_state.chat:
-    with st.chat_message(msg["role"]):
-        st.markdown(plain(msg["content"]))
-        if msg.get("sources"):
-            st.caption("Sources: " + ", ".join(msg["sources"]))
+chat_box = st.container()
+with chat_box:
+    for msg in st.session_state.chat:
+        with st.chat_message(msg["role"]):
+            st.markdown(plain(msg["content"]))
+            if msg.get("sources"):
+                st.caption("Sources: " + ", ".join(msg["sources"]))
 
-question = st.chat_input("e.g. What rebates can I get for a heat pump?")
+# Inside a container, the chat input sits inline instead of pinned to the bottom. A pinned
+# chat input makes Streamlit auto-scroll to the bottom, which jumped past the bill results.
+with st.container():
+    question = st.chat_input("e.g. What rebates can I get for a heat pump?")
 if question:
     st.session_state.chat.append({"role": "user", "content": question})
-    with st.chat_message("user"):
+    with chat_box, st.chat_message("user"):
         st.markdown(plain(question))
-    with st.chat_message("assistant"):
+    with chat_box, st.chat_message("assistant"):
         try:
             with st.spinner("Looking it up..."):
                 bill, savings = st.session_state.result or (None, None)
