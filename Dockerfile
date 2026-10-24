@@ -9,7 +9,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py backend.py ./
+COPY app.py backend.py assisted_fill.py ./
 COPY sample_bills/ sample_bills/
 
 # Run as a non-root user.

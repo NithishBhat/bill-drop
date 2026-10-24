@@ -97,7 +97,7 @@ setTimeout(()=>{
  F.filter(f=>f.target==='choice_13_35_1').forEach(click);
  const b=document.createElement('div');
  b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:2147483647;background:#1b5e20;color:#fff;padding:12px 44px 12px 16px;font:16px/1.4 sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.3)';
- b.textContent='Energy Bill Coach filled '+n+' fields from your bill. Check every highlighted field, add your email and phone, then click Submit yourself.'+(miss.length?' Not found on the form: '+miss.join(', ')+'.':'')
+ b.textContent='Bill Drop filled '+n+' fields from your bill. Check every highlighted field, add your email and phone, then click Submit yourself.'+(miss.length?' Not found on the form: '+miss.join(', ')+'.':'')
   +(long.length?' Longer than the form allows, please fix: '+long.join(', ')+'.':'');
  const x=document.createElement('button');x.textContent='\\u00d7';x.setAttribute('aria-label','Close');
  x.style.cssText='position:absolute;right:12px;top:6px;background:none;border:0;color:#fff;font-size:24px;cursor:pointer';

@@ -1,4 +1,4 @@
-"""Energy Bill Coach: upload a Massachusetts electricity bill, see how to save.
+"""Bill Drop: upload a Massachusetts electricity bill, see how to save.
 
 Run with:  streamlit run app.py
 """
@@ -12,7 +12,7 @@ from backend import ask, find_savings, read_bill
 
 SAMPLE_BILL = Path(__file__).parent / "sample_bills" / "sample_eversource_bill.png"
 
-st.set_page_config(page_title="Energy Bill Coach", page_icon="⚡", layout="centered")
+st.set_page_config(page_title="Bill Drop", page_icon="⚡", layout="centered")
 
 
 # Cached so Streamlit reruns (every click) don't re-bill us for the same upload.
@@ -34,7 +34,7 @@ def plain(text):
 st.session_state.setdefault("result", None)
 st.session_state.setdefault("chat", [])
 
-st.title("⚡ Energy Bill Coach")
+st.title("⚡ Bill Drop")
 st.write("Upload your Massachusetts electric bill. We'll read it, find a cheaper supply plan "
          "and the Mass Save rebates that fit your home, and show what you'd save per year.")
 
@@ -118,6 +118,7 @@ if st.session_state.result:
             # Rendered in an iframe so Streamlit doesn't strip the javascript: link. Bill values
             # are percent-encoded inside the URL, so they can't inject HTML here.
             st.iframe(
+                '<style>html,body{margin:0;overflow:hidden}</style>'
                 f'<a href="{html.escape(bookmarklet_url(fields))}" title="Drag me to your bookmarks bar" '
                 'onclick="alert(\'Drag this button to your bookmarks bar, then click it on the BCCE form.\');return false;" '
                 'style="display:block;text-align:center;background:#2e7d32;color:#fff;padding:10px 14px;'

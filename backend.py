@@ -1,4 +1,4 @@
-"""Backend for the energy bill coach.
+"""Backend for Bill Drop, the Massachusetts electricity bill coach.
 
 Contract with the frontend (don't rename keys without telling your teammate):
     read_bill(image_bytes) -> bill dict (see BILL_SCHEMA)
@@ -278,7 +278,7 @@ SOURCE_NAMES = {
 SOURCE_NAMES.update({f"energyswitchma-02130-{t}.md": "Energy Switch MA (MA DPU): supplier offers"
                      for t in ("lowest-rates", "no-cancellation-fee", "100-percent-renewable", "all-offers")})
 
-ASK_PROMPT = """You are a friendly Massachusetts energy bill coach. Answer the question in 2-5 short sentences
+ASK_PROMPT = """You are Bill Drop, a friendly Massachusetts energy bill coach. Answer the question in 2-5 short sentences
 using ONLY the reference documents below (and the user's bill facts, if given). If the documents don't
 cover it, say so and suggest calling Mass Save at 866-527-7283. Never invent rates or rebate amounts.
 If the bill facts include the app's savings figures, quote those exactly instead of doing your own math.
