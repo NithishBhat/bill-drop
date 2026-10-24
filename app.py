@@ -26,6 +26,29 @@ def money(x):
     return "—" if x is None else f"${x:,.0f}"
 
 
+def drag_button_html(url):
+    """The draggable bookmarklet with a 'drag me' hint. Rendered in an iframe so Streamlit doesn't
+    strip the javascript: link; bill values are percent-encoded in the URL, so they can't inject HTML.
+    The link text becomes the bookmark's name, so the hint sits beside it, not inside it."""
+    return f"""<style>
+  html,body{{margin:0;overflow:hidden;font:15px sans-serif;color:#fafafa}}
+  @media (prefers-color-scheme: light){{body{{color:#262730}}}}
+  .row{{display:flex;align-items:center;gap:12px;height:48px}}
+  a{{background:#2e7d32;color:#fff;padding:11px 18px;border-radius:8px;font-weight:700;
+     text-decoration:none;cursor:grab;white-space:nowrap;box-shadow:0 0 0 3px #a5d6a7}}
+  .hint{{opacity:.9}} .arrow{{display:inline-block;animation:up 1s ease-in-out infinite}}
+  @keyframes up{{50%{{transform:translateY(-5px)}}}}
+</style>
+<div class="row">
+  <a href="{html.escape(url)}" draggable="true" onclick="
+     alert('Almost! Don\\'t click it here. Drag this green button up onto your bookmarks bar '
+           + '(press ' + key + ' if you can\\'t see the bar). Then open the BCCE form and click the bookmark there.');
+     return false;">⚡ Fill BCCE form</a>
+  <span class="hint"><span class="arrow">⬆</span> <b>Drag</b> this up to your bookmarks bar</span>
+</div>
+<script>var key = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌘ + Shift + B' : 'Ctrl + Shift + B';</script>"""
+
+
 def plain(text):
     """Escape $ so Streamlit doesn't render model text like '$250 to $500' as LaTeX math."""
     return text.replace("$", "\\$")
@@ -104,30 +127,25 @@ if st.session_state.result:
         plan_id, plan_name, plan_rate = plan
         fields = form_fields(bill, plan_id)
         st.subheader("✍️ Sign up for BCCE in one click")
-        st.write(f"We can fill the City of Boston's enrollment form with your bill details "
-                 f"for **BCCE {plan_name}** (\\${plan_rate}/kWh). You check it and submit it yourself.")
-        st.markdown(
-            "1. **Drag** the green button below to your bookmarks bar (one time).\n"
-            "2. **Open the BCCE form** with the button on the right.\n"
-            "3. On the form, **click the bookmark**. Your bill details fill in and are highlighted.\n"
-            "4. **Check every field**, add your **email and phone**, then click **Submit** "
-            "and complete the reCAPTCHA. Nothing is submitted for you."
-        )
-        drag_col, open_col = st.columns(2)
-        with drag_col:
-            # Rendered in an iframe so Streamlit doesn't strip the javascript: link. Bill values
-            # are percent-encoded inside the URL, so they can't inject HTML here.
-            st.iframe(
-                '<style>html,body{margin:0;overflow:hidden}</style>'
-                f'<a href="{html.escape(bookmarklet_url(fields))}" title="Drag me to your bookmarks bar" '
-                'onclick="alert(\'Drag this button to your bookmarks bar, then click it on the BCCE form.\');return false;" '
-                'style="display:block;text-align:center;background:#2e7d32;color:#fff;padding:10px 14px;'
-                'border-radius:8px;font:600 15px sans-serif;text-decoration:none;cursor:grab">'
-                '⚡ Fill BCCE form</a>',
-                height=50,
-            )
-        with open_col:
-            st.link_button("Open the BCCE form ↗", BCCE_FORM_URL, use_container_width=True)
+        st.write(f"Bill Drop can fill in the City of Boston's sign-up form for **BCCE {plan_name}** "
+                 f"(\\${plan_rate}/kWh) using your bill. You just check it and press Submit.")
+
+        with st.container(border=True):
+            st.markdown("**Step 1 · Save the helper button** (one time, on a laptop)")
+            st.markdown("Press **Ctrl + Shift + B** (Mac: **⌘ + Shift + B**) so your bookmarks bar shows "
+                        "at the top of the browser. Then **drag** the green button up onto it.")
+            st.iframe(drag_button_html(bookmarklet_url(fields)), height=52)
+
+        with st.container(border=True):
+            st.markdown("**Step 2 · Open the form and click your new bookmark**")
+            st.link_button("Open the BCCE sign-up form ↗", BCCE_FORM_URL, type="primary")
+            st.markdown("On the form page, click **⚡ Fill BCCE form** in your bookmarks bar. "
+                        "Your details fill in and turn yellow.")
+
+        with st.container(border=True):
+            st.markdown("**Step 3 · Check and submit**")
+            st.markdown("Check the yellow fields, add your **email and phone**, then press **Submit**. "
+                        "Bill Drop never submits anything for you.")
 
         missing = missing_fields(fields)
         if missing:
