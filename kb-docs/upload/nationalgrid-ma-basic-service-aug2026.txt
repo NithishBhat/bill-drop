@@ -1,0 +1,30 @@
+M.D.P.U. No. 1-26-I
+Sheet 5 of 5
+Canceling M.D.P.U. No. 1-26-H
+MASSACHUSETTS ELECTRIC COMPANY
+SUMMARY OF BASIC SERVICE RATES
+Customer Group Component Fixed Price
+(Rate) Option August September October November December January Last Change
+Residential Base Basic Service Rate $0.16498 $0.15387 $0.14929 $0.14928 $0.15517 $0.17790 $0.19399 8/1/26
+(R-1, R-2) Basic Service Admin Cost Adjmt Factor $0.00687 $0.00687 $0.00687 $0.00687 $0.00687 $0.00687 $0.00687 8/1/26
+Smart Grid Customer Cost Adjmt Factor $0.00000 $0.00000 $0.00000 $0.00000 $0.00000 $0.00000 $0.00000 5/1/22
+Total Billed Basic Service Rate $0.17185 $0.16074 $0.15616 $0.15615 $0.16204 $0.18477 $0.20086 8/1/26
+Commercial Base Basic Service Rate $0.15045 $0.12274 $0.10307 $0.10762 $0.12732 $0.19390 $0.24310 8/1/26
+(G-1, S-1, S-2, S-3, S-5, S-6) Basic Service Admin Cost Adjmt Factor $0.00523 $0.00523 $0.00523 $0.00523 $0.00523 $0.00523 $0.00523 8/1/26
+Smart Grid Customer Cost Adjmt Factor $0.00000 $0.00000 $0.00000 $0.00000 $0.00000 $0.00000 $0.00000 5/1/22
+Total Billed Basic Service Rate $0.15568 $0.12797 $0.10830 $0.11285 $0.13255 $0.19913 $0.24833 8/1/26
+Industrial (SEMA) Base Basic Service Rate $0.10737 $0.11483 $0.10133 $0.10566 n/a n/a n/a 8/1/26
+(G-2, G-3) Basic Service Admin Cost Adjmt Factor $0.00287 $0.00287 $0.00287 $0.00287 n/a n/a n/a 8/1/26
+Smart Grid Customer Cost Adjmt Factor $0.00000 $0.00000 $0.00000 $0.00000 n/a n/a n/a 5/1/22
+Total Billed Basic Service Rate $0.11024 $0.11770 $0.10420 $0.10853 n/a n/a n/a 8/1/26
+Industrial (NEMA) Base Basic Service Rate $0.10422 $0.11157 $0.09877 $0.10196 n/a n/a n/a 8/1/26
+(G-2, G-3) Basic Service Admin Cost Adjmt Factor $0.00287 $0.00287 $0.00287 $0.00287 n/a n/a n/a 8/1/26
+Smart Grid Customer Cost Adjmt Factor $0.00000 $0.00000 $0.00000 $0.00000 n/a n/a n/a 5/1/22
+Total Billed Basic Service Rate $0.10709 $0.11444 $0.10164 $0.10483 n/a n/a n/a 8/1/26
+Industrial (WCMA) Base Basic Service Rate $0.10565 $0.11289 $0.09893 $0.10495 n/a n/a n/a 8/1/26
+(G-2, G-3) Basic Service Admin Cost Adjmt Factor $0.00287 $0.00287 $0.00287 $0.00287 n/a n/a n/a 8/1/26
+Smart Grid Customer Cost Adjmt Factor $0.00000 $0.00000 $0.00000 $0.00000 n/a n/a n/a 5/1/22
+Total Billed Basic Service Rate $0.10852 $0.11576 $0.10180 $0.10782 n/a n/a n/a 8/1/26
+Issued by: Lisa Wieland Effective: October 1, 2026
+President Issued: September 9, 2026
+Variable Price Option

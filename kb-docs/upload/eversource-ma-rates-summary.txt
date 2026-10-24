@@ -1,0 +1,425 @@
+NSTAR ELECTRIC COMPANY
+d/b/a EVERSOURCE ENERGY
+SUMMARY OF ELECTRIC SERVICE DELIVERY RATES
+M.D.P.U. No. 1-26-F
+Page 1 of 7
+PART A - TOTAL DELIVERY RATES
+(1) Reconciling Rates = Sum of Part B Rates
+Net Metering Provisional Electric Sector Electric
+MDPU Service Rate Base Exogenous Reconciling Total Revenue Distributed Recovery System Plan Modernization Vehicle Program Renewable Total
+Schedule No. Area Component Distribution Cost Adjust Rate Adjust (1) Distribution Decoupling Solar (SMART) Surcharge (NMRS) Factor (PSPF) Plan (ESMP) Factor (EVP) Transition Transmission System Benefits Recon. Factor Total EEC Energy Delivery
+MDPU No. 59H MDPU No. 60N MDPU No. 74M MDPU No. 68N MDPU No. 81B MDPU No. 84 MDPU No. 78F MDPU No. 49B MDPU No. 48A MDPU No. 50G MDPU No. 51A
+Last change 4/1/26 1/1/26 9/1/26 9/1/26 4/1/26 1/1/26 1/1/26 9/1/26 7/1/26 9/1/26 1/1/26 1/1/26 1/1/02 7/1/26 7/1/26 1/1/03 9/1/26
+R-1 7 ALL Customer $10.00 $10.00 $10.00
+Residential BOST/CAMB/SOUTH/WMA Energy (kWh) $0.06603 ($0.00001) $0.03235 $0.09837 $0.00539 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.02042 $0.02292 $0.00050 $0.18635
+CAPE Energy (kWh) $0.06603 ($0.00001) $0.03235 $0.09837 $0.00539 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.03488 $0.03738 $0.00050 $0.20081
+R-1HP 85 ALL Customer $10.00 $10.00 $10.00
+Residential Heat Pump BOST/CAMB/SOUTH/WMA Energy (kWh) - Summer (1) $0.06603 ($0.00001) $0.03235 $0.09837 $0.00443 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.02042 $0.02292 $0.00050 $0.18539
+Service BOST/CAMB/SOUTH/WMA Energy (kWh) - Winter (1) $0.02052 ($0.00001) $0.03235 $0.05286 $0.00443 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.01492 $0.00250 $0.02042 $0.02292 $0.00050 $0.10807
+CAPE Energy (kWh) - Summer (1) $0.06603 ($0.00001) $0.03235 $0.09837 $0.00443 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.03488 $0.03738 $0.00050 $0.19985
+CAPE Energy (kWh) - Winter (1) $0.02052 ($0.00001) $0.03235 $0.05286 $0.00443 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.01492 $0.00250 $0.03488 $0.03738 $0.00050 $0.12253
+R-2 8 ALL Customer $10.00 $10.00 $10.00
+Residential Assistance BOST/CAMB/SOUTH/WMA Energy (kWh) $0.06603 ($0.00001) $0.03235 $0.09837 $0.00539 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.02042 $0.02292 $0.00050 $0.18635
+CAPE Energy (kWh) $0.06603 ($0.00001) $0.03235 $0.09837 $0.00539 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.03488 $0.03738 $0.00050 $0.20081
+R-2HP 86 ALL Customer $10.00 $10.00 $10.00
+Residential Assistance BOST/CAMB/SOUTH/WMA Energy (kWh) - Summer (1) $0.06603 ($0.00001) $0.03235 $0.09837 $0.00443 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.02042 $0.02292 $0.00050 $0.18539
+Heat Pump Service BOST/CAMB/SOUTH/WMA Energy (kWh) - Winter (1) $0.02052 ($0.00001) $0.03235 $0.05286 $0.00443 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.01492 $0.00250 $0.02042 $0.02292 $0.00050 $0.10807
+CAPE Energy (kWh) - Summer (1) $0.06603 ($0.00001) $0.03235 $0.09837 $0.00443 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.03488 $0.03738 $0.00050 $0.19985
+CAPE Energy (kWh) - Winter (1) $0.02052 ($0.00001) $0.03235 $0.05286 $0.00443 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.01492 $0.00250 $0.03488 $0.03738 $0.00050 $0.12253
+R-3 9 ALL Customer $10.00 $10.00 $10.00
+Residential Space Heating BOST/CAMB/SOUTH/WMA Energy (kWh) $0.05881 ($0.00001) $0.03235 $0.09115 $0.00527 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.02042 $0.02292 $0.00050 $0.17901
+CAPE Energy (kWh) $0.05881 ($0.00001) $0.03235 $0.09115 $0.00527 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.03488 $0.03738 $0.00050 $0.19347
+R-4 10 ALL Customer $10.00 $10.00 $10.00
+Residential Space BOST/CAMB/SOUTH/WMA Energy (kWh) $0.05881 ($0.00001) $0.03235 $0.09115 $0.00527 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.02042 $0.02292 $0.00050 $0.17901
+Heating Assistance CAPE Energy (kWh) $0.05881 ($0.00001) $0.03235 $0.09115 $0.00527 $0.00583 $0.00625 $0.00008 $0.00001 $0.00104 ($0.00077) $0.04673 $0.00250 $0.03488 $0.03738 $0.00050 $0.19347
+23 36 WMA Customer $20.00 $20.00 $20.00
+Optional Water Heating Energy (kWh) $0.04060 ($0.00001) $0.02450 $0.06509 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.03387 $0.00250 $0.01139 $0.01389 $0.00050 $0.12243
+(Closed)
+24 37 WMA Customer $65.00 $65.00 $65.00
+Optional Church Demand (>2 kW) $6.61 $6.61 $7.56 $14.17
+(Closed) Energy (kWh) $0.01024 ($0.00001) $0.02450 $0.03473 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.05820
+G-1 11 BOST Customer $15.00 $15.00 $15.00
+Small General Service Energy (kWh) $0.05800 ($0.00001) $0.02450 $0.08249 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04208 $0.00250 $0.01139 $0.01389 $0.00050 $0.14804
+19 CAMB Customer $15.00 $15.00 $15.00
+Energy (kWh) $0.03789 ($0.00001) $0.02450 $0.06238 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04587 $0.00250 $0.01139 $0.01389 $0.00050 $0.13172
+29 SOUTH/CAPE Customer $15.00 $15.00 $15.00
+SOUTH Energy (kWh) $0.04171 ($0.00001) $0.02450 $0.06620 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04587 $0.00250 $0.01139 $0.01389 $0.00050 $0.13554
+CAPE Energy (kWh) $0.04171 ($0.00001) $0.02450 $0.06620 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04587 $0.00250 $0.02682 $0.02932 $0.00050 $0.15097
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+38 WMA Customer (without meter) $15.00 $15.00 $15.00
+Customer (with meter) $30.00 $30.00 $30.00
+Energy (kWh) $0.04428 ($0.00001) $0.02450 $0.06877 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04567 $0.00250 $0.01139 $0.01389 $0.00050 $0.13791
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+11 BOST Customer $20.00 $20.00 $20.00
+Demand (>10 kW) $22.31 $22.31 $19.34 $41.65
+Energy (kWh) $0.01354 ($0.00001) $0.02450 $0.03803 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.06150
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+38 WMA Customer (without meter) $15.00 $15.00 $15.00
+Customer (with meter) $30.00 $30.00 $30.00
+Demand (>2 kW) $13.70 $13.70 $13.85 $27.55
+Energy (kWh) $0.00404 ($0.00001) $0.02450 $0.02853 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.05200
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+Energy Efficiency Charge (EEC)
+Non-Demand
+Demand
+Distribution Charges
+Issued by: Douglas W. Foley
+                   President 
+Filed:  August 25, 2026
+ Effective:  Sept 1, 2026
+
+NSTAR ELECTRIC COMPANY
+d/b/a EVERSOURCE ENERGY
+SUMMARY OF ELECTRIC SERVICE DELIVERY RATES
+M.D.P.U. No. 1-26-F
+Page 2 of 7
+PART A - TOTAL DELIVERY RATES
+(1) Reconciling Rates = Sum of Part B Rates
+Net Metering Provisional Electric Sector Electric
+MDPU Service Rate Base Exogenous Reconciling Total Revenue Distributed Recovery System Plan Modernization Vehicle Program Renewable Total
+Schedule No. Area Component Distribution Cost Adjust Rate Adjust (1) Distribution Decoupling Solar (SMART) Surcharge (NMRS) Factor (PSPF) Plan (ESMP) Factor (EVP) Transition Transmission System Benefits Recon. Factor Total EEC Energy Delivery
+MDPU No. 59H MDPU No. 60N MDPU No. 74M MDPU No. 68N MDPU No. 81B MDPU No. 84 MDPU No. 78F MDPU No. 49B MDPU No. 48A MDPU No. 50G MDPU No. 51A
+Last change 4/1/26 1/1/26 9/1/26 9/1/26 4/1/26 1/1/26 1/1/26 9/1/26 7/1/26 9/1/26 1/1/26 1/1/26 1/1/02 7/1/26 7/1/26 1/1/03 9/1/26
+Energy Efficiency Charge (EEC)Distribution Charges
+G-2 15 BOST Customer (kW<=150) $27.00 $27.00 $27.00
+Medium General Service Customer (150<kW<=300) $110.00 $110.00 $110.00
+Customer (300<kW<=1000) $160.00 $160.00 $160.00
+Customer (kW>1000) $370.00 $370.00 $370.00
+Demand (kW) $20.21 $20.21 $13.74 $33.95
+Energy (kWh) $0.00000 ($0.00001) $0.01767 $0.01766 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03853
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+20 CAMB Customer $110.00 $110.00 $110.00
+Demand (kVA) $5.55 $5.55 $13.74 $19.29
+Energy (kWh) $0.01548 ($0.00001) $0.01767 $0.03314 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.05401
+Transformer Ownership Credit (kVA) ($1.09) ($1.09) ($1.09)
+30 SOUTH/CAPE Customer $370.00 $370.00 $370.00
+SOUTH/CAPE Demand (kVA) $3.72 $3.72 $13.74 $17.46
+SOUTH Energy (kWh) $0.01565 ($0.00001) $0.01767 $0.03331 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.05418
+CAPE Energy (kWh) $0.01565 ($0.00001) $0.01767 $0.03331 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.00000 $0.00250 $0.02682 $0.02932 $0.00050 $0.06961
+Transformer Ownership Credit (kVA) ($1.09) ($1.09) ($1.09)
+40 WMA Customer $110.00 $110.00 $110.00
+Demand $11.30 $11.30 $13.74 $25.04
+Energy (kWh) $0.00215 ($0.00001) $0.01767 $0.01981 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.04068
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+G-3 13 BOST Customer $370.00 $370.00 $370.00
+Large General Service Demand (kW) $15.97 $15.97 $14.08 $30.05
+Coincident Peak Demand (kW) (Optional) $22.39 $22.39
+Peak kWh $0.00000 $0.00000 $0.01085 $0.01085 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.02892
+Off Peak kWh $0.00000 $0.00000 $0.01085 $0.01085 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.02892
+21 CAMB Customer $370.00 $370.00 $370.00
+Demand (<=100 kVA) $7.09 $7.09 $837.44 $844.53
+Demand ( > 100 kVA) $7.09 $7.09 $14.85 $21.94
+Coincident Peak Demand (<=100 kW) (Optional) $837.44 $837.44
+Coincident Peak Demand (>100 kW) (Optional) $23.54 $23.54
+Energy (kWh) $0.00126 $0.00000 $0.01085 $0.01211 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03018
+31 SOUTH/CAPE Customer $930.00 $930.00 $930.00
+SOUTH/CAPE Demand (kVA) $4.01 $4.01 $14.08 $18.09
+Coincident Peak Demand (kW) (Optional) $22.39 $22.39
+SOUTH Energy (kWh) $0.01034 $0.00000 $0.01085 $0.02119 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03926
+CAPE Energy (kWh) $0.01034 $0.00000 $0.01085 $0.02119 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.02682 $0.02932 $0.00050 $0.05469
+Transformer Ownership Credit (kVA) ($1.09) ($1.09) ($1.09)
+42 WMA Customer (350<= kW < 1000 kW) $760.00 $760.00 $760.00
+Customer (1000<= kW < 1500 kW) $1,625.00 $1,625.00 $1,625.00
+Customer (1500<= kW < 2500 kW) $2,700.00 $2,700.00 $2,700.00
+Demand (kW) $10.49 $10.49 $14.08 $24.57
+Coincident Peak Demand (kW) (Optional) $22.39 $22.39
+Peak kWh $0.00328 $0.00000 $0.01085 $0.01413 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03220
+Off Peak kWh $0.00118 $0.00000 $0.01085 $0.01203 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03010
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+G-4 32 SOUTH/CAPE Customer $15.00 $15.00 $15.00
+General Power SOUTH/CAPE Demand (kW) $2.59 $2.59 $7.35 $9.94
+(Closed) SOUTH Energy (kWh) $0.02586 ($0.00001) $0.02450 $0.05035 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.07382
+CAPE Energy (kWh) $0.02586 ($0.00001) $0.02450 $0.05035 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.00000 $0.00250 $0.02682 $0.02932 $0.00050 $0.08925
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+G-5 23 CAMB Customer $15.00 $15.00 $15.00
+Commercial Space Energy (kWh) $0.02948 ($0.00001) $0.02450 $0.05397 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04587 $0.00250 $0.01139 $0.01389 $0.00050 $0.12331
+Heating
+(Closed)
+Issued by: Douglas W. Foley
+                   President 
+Filed:  August 25, 2026
+ Effective:  Sept 1, 2026
+
+NSTAR ELECTRIC COMPANY
+d/b/a EVERSOURCE ENERGY
+SUMMARY OF ELECTRIC SERVICE DELIVERY RATES
+M.D.P.U. No. 1-26-F
+Page 3 of 7
+PART A - TOTAL DELIVERY RATES
+(1) Reconciling Rates = Sum of Part B Rates
+Net Metering Provisional Electric Sector Electric
+MDPU Service Rate Base Exogenous Reconciling Total Revenue Distributed Recovery System Plan Modernization Vehicle Program Renewable Total
+Schedule No. Area Component Distribution Cost Adjust Rate Adjust (1) Distribution Decoupling Solar (SMART) Surcharge (NMRS) Factor (PSPF) Plan (ESMP) Factor (EVP) Transition Transmission System Benefits Recon. Factor Total EEC Energy Delivery
+MDPU No. 59H MDPU No. 60N MDPU No. 74M MDPU No. 68N MDPU No. 81B MDPU No. 84 MDPU No. 78F MDPU No. 49B MDPU No. 48A MDPU No. 50G MDPU No. 51A
+Last change 4/1/26 1/1/26 9/1/26 9/1/26 4/1/26 1/1/26 1/1/26 9/1/26 7/1/26 9/1/26 1/1/26 1/1/26 1/1/02 7/1/26 7/1/26 1/1/03 9/1/26
+Energy Efficiency Charge (EEC)Distribution Charges
+G-6 24 CAMB Customer $20.00 $20.00 $20.00
+Optional Time of Use Peak kWh $0.06346 ($0.00001) $0.02450 $0.08795 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04587 $0.00250 $0.01139 $0.01389 $0.00050 $0.15729
+(Closed) Low A kWh $0.02338 ($0.00001) $0.02450 $0.04787 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.07134
+G-6 34 SOUTH/CAPE Customer $15.00 $15.00 $15.00
+All Electric School SOUTH Energy (kWh) $0.02300 ($0.00001) $0.02450 $0.04749 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04587 $0.00250 $0.01139 $0.01389 $0.00050 $0.11683
+(Closed) CAPE Energy (kWh) $0.02300 ($0.00001) $0.02450 $0.04749 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.04587 $0.00250 $0.02682 $0.02932 $0.00050 $0.13226
+G-7 35 SOUTH/CAPE Customer $20.00 $20.00 $20.00
+Optional General SOUTH/CAPE Demand (kW) $4.71 $4.71 $4.71
+Time of Use SOUTH Peak kWh $0.03844 ($0.00001) $0.02450 $0.06293 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.03534 $0.00250 $0.01139 $0.01389 $0.00050 $0.12174
+(Closed) SOUTH Low A kWh $0.02874 ($0.00001) $0.02450 $0.05323 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.03534 $0.00250 $0.01139 $0.01389 $0.00050 $0.11204
+CAPE Peak kWh $0.03844 ($0.00001) $0.02450 $0.06293 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.03534 $0.00250 $0.02682 $0.02932 $0.00050 $0.13717
+CAPE Low A kWh $0.02874 ($0.00001) $0.02450 $0.05323 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.03534 $0.00250 $0.02682 $0.02932 $0.00050 $0.12747
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+T-1 14 BOST Customer $20.00 $20.00 $20.00
+Optional Time of Use Peak kWh - Winter (2) $0.08928 ($0.00001) $0.02450 $0.11377 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.12510 $0.00250 $0.01139 $0.01389 $0.00050 $0.26234
+(Closed) Off Peak kWh - Winter (2) $0.02692 ($0.00001) $0.02450 $0.05141 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.07488
+Peak kWh - Summer (2) $0.18410 ($0.00001) $0.02450 $0.20859 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.11872 $0.00250 $0.01139 $0.01389 $0.00050 $0.35078
+Off Peak kWh - Summer (2) $0.02912 ($0.00001) $0.02450 $0.05361 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.07708
+T-4 41 WMA Customer $110.00 $110.00 $110.00
+Optional Medium General Demand $11.30 $11.30 $13.74 $25.04
+Service Time of Use Peak kWh $0.00419 ($0.00001) $0.01767 $0.02185 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.04272
+Off Peak kWh $0.00143 ($0.00001) $0.01767 $0.01909 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03996
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+T-5 43 WMA Customer $3,800.00 $3,800.00 $3,800.00
+Extra Large General On Peak Demand $8.11 $8.11 $14.08 $22.19
+Service Coincident Peak Demand $22.39 $22.39
+Peak kWh $0.00328 $0.00000 $0.01085 $0.01413 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03220
+Off Peak kWh $0.00118 $0.00000 $0.01085 $0.01203 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03010
+Transformer Ownership Credit (kW) ($1.09) ($1.09) ($1.09)
+WR 16 BOST Customer $153.58 $153.58 $153.58
+MWRA Demand (kW) $0.00 $0.00 $11.69 $11.69
+Coincident Peak Demand (kW) (Optional) $23.16 $23.16
+Energy (kWh) $0.00000 $0.00000 $0.01085 $0.01085 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.02892
+SB-1 25 CAMB Customer $781.00 $781.00 $781.00
+Standby Standby Demand/Replacement $7.65 $7.65 $7.29 $14.94
+Minimum Reservation $7.65 $7.65 $0.52 $8.17
+Replacement Energy $0.00126 $0.00000 $0.01085 $0.01211 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03018
+MS-1 26 CAMB Customer $781.00 $781.00 $781.00
+Maintenance Standby Demand/Replacement $7.65 $7.65 $7.65
+Replacement Energy $0.00126 $0.00000 $0.01085 $0.01211 ($0.00015) $0.00204 $0.00219 $0.00002 $0.00000 $0.00035 ($0.00077) $0.00000 $0.00250 $0.01139 $0.01389 $0.00050 $0.03018
+SS-1 Customer $0.00
+Supplemental 27 CAMB All Rate Components per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3 per G-3
+Issued by: Douglas W. Foley
+                   President 
+Filed:  August 25, 2026
+ Effective:  Sept 1, 2026
+
+NSTAR ELECTRIC COMPANY
+d/b/a EVERSOURCE ENERGY
+SUMMARY OF ELECTRIC SERVICE DELIVERY RATES
+M.D.P.U. No. 1-26-F
+Page 4 of 7
+PART A - TOTAL DELIVERY RATES
+(1) Reconciling Rates = Sum of Part B Rates
+Net Metering Provisional Electric Sector Electric
+MDPU Service Rate Base Exogenous Reconciling Total Revenue Distributed Recovery System Plan Modernization Vehicle Program Renewable Total
+Schedule No. Area Component Distribution Cost Adjust Rate Adjust (1) Distribution Decoupling Solar (SMART) Surcharge (NMRS) Factor (PSPF) Plan (ESMP) Factor (EVP) Transition Transmission System Benefits Recon. Factor Total EEC Energy Delivery
+MDPU No. 59H MDPU No. 60N MDPU No. 74M MDPU No. 68N MDPU No. 81B MDPU No. 84 MDPU No. 78F MDPU No. 49B MDPU No. 48A MDPU No. 50G MDPU No. 51A
+Last change 4/1/26 1/1/26 9/1/26 9/1/26 4/1/26 1/1/26 1/1/26 9/1/26 7/1/26 9/1/26 1/1/26 1/1/26 1/1/02 7/1/26 7/1/26 1/1/03 9/1/26
+Energy Efficiency Charge (EEC)Distribution Charges
+S-1 44 ALL Fixture Charge
+Per Rate 
+Schedule
+Per Rate 
+Schedule
+Per Rate 
+Schedule
+Street and Security Lighting BOST/CAMB/SOUTH/WMA Energy (kWh) ($0.00001) $0.02450 $0.02449 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.02203 $0.00250 $0.01139 $0.01389 $0.00050 $0.06999
+CAPE Energy (kWh) ($0.00001) $0.02450 $0.02449 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.02203 $0.00250 $0.02682 $0.02932 $0.00050 $0.08542
+S-2 45 BOST/CAMB/SOUTH/WMA Energy (kWh) $0.04650 ($0.00001) $0.02450 $0.07099 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.02203 $0.00250 $0.01139 $0.01389 $0.00050 $0.11649
+Street and Security Lighting CAPE Energy (kWh) $0.04650 ($0.00001) $0.02450 $0.07099 ($0.00034) $0.00450 $0.00483 $0.00006 $0.00001 $0.00079 ($0.00077) $0.02203 $0.00250 $0.02682 $0.02932 $0.00050 $0.13192
+'- Customer Owned
+EV-2 79 ALL Customer $225.04 $225.04 $225.04
+General Service ALL Demand (kW) $0.00 $0.00 $0.00
+Optional Electric Vehicle BOST/CAMB/SOUTH/WMA Energy (kWh) $0.03688 ($0.00001) $0.01767 $0.05454 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.03651 $0.00250 $0.01139 $0.01389 $0.00050 $0.11192
+Charging CAPE Energy (kWh) $0.03688 ($0.00001) $0.01767 $0.05454 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.03651 $0.00250 $0.02682 $0.02932 $0.00050 $0.12735
+ALL Customer $225.04 $225.04 $225.04
+ALL Demand (kW) $3.64 $3.64 $3.64
+BOST/CAMB/SOUTH/WMA Energy (kWh) $0.02823 ($0.00001) $0.01767 $0.04589 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.03651 $0.00250 $0.01139 $0.01389 $0.00050 $0.10327
+CAPE Energy (kWh) $0.02823 ($0.00001) $0.01767 $0.04589 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.03651 $0.00250 $0.02682 $0.02932 $0.00050 $0.11870
+ALL Customer $225.04 $225.04 $225.04
+ALL Demand (kW) $7.29 $7.29 $7.29
+BOST/CAMB/SOUTH/WMA Energy (kWh) $0.01958 ($0.00001) $0.01767 $0.03724 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.03651 $0.00250 $0.01139 $0.01389 $0.00050 $0.09462
+CAPE Energy (kWh) $0.01958 ($0.00001) $0.01767 $0.03724 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.03651 $0.00250 $0.02682 $0.02932 $0.00050 $0.11005
+ALL Customer $225.04 $225.04 $225.04
+ALL Demand (kW) $14.59 $14.59 $14.59
+BOST/CAMB/SOUTH/WMA Energy (kWh) $0.00228 ($0.00001) $0.01767 $0.01994 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.03651 $0.00250 $0.01139 $0.01389 $0.00050 $0.07732
+CAPE Energy (kWh) $0.00228 ($0.00001) $0.01767 $0.01994 ($0.00025) $0.00332 $0.00355 $0.00004 $0.00001 $0.00058 ($0.00077) $0.03651 $0.00250 $0.02682 $0.02932 $0.00050 $0.09275
+(1): R-1HP and R-2HP Summer Months: May thru October; Winter Months: November thru April
+(2): Boston T-1 Summer Months: June thru September; Winter Months: October thru May
+EV-2A:  0% <= Load Factor <= 5%
+EV-2B:  5% < Load Factor <= 10%
+EV-2C:  10% < Load Factor <= 15%
+EV-2D:  Load Factor > 15%
+Issued by: Douglas W. Foley
+                   President 
+Filed:  August 25, 2026
+ Effective:  Sept 1, 2026
+
+NSTAR ELECTRIC COMPANY
+d/b/a EVERSOURCE ENERGY
+SUMMARY OF ELECTRIC SERVICE DELIVERY RATES
+M.D.P.U. No. 1-26-F
+Page 5 of 7
+PART B - RECONCILING RATES
+All Rates are in $/kWh across all hours and usage levels; totals appear in Part A
+Advanced 
+Metering 
+Infrastructure 
+(AMI)
+Storm Cost 
+Recovery 
+Adjustment 
+Factor (SCRA)
+Storm 
+Reserve 
+Adjustment 
+(SRAF)
+Total Storm 
+Cost 
+Recovery
+MDPU No. 61F MDPU No. 62G MDPU No. 70G MDPU No. 69F MDPU No. 66F MDPU No. 47F MDPU No. 67I MDPU No. 72E MDPU No. 73L MDPU No. 75D MDPU No. 76D MDPU No. 80E MDPU No. 63H MDPU No. 65G
+Last change 1/1/26 1/1/26 1/1/26 1/1/26 1/1/26 1/1/26 1/1/26 1/1/26 9/1/26 1/1/26 1/1/26 9/1/26 1/1/26 1/1/26 1/1/26 9/1/26
+Residential ALL $0.00138 $0.01033 $0.00003 ($0.00037) $0.00018 ($0.00071) ($0.00031) $0.00139 $0.00280 ($0.00092) $0.00016 $0.00879 $0.00960 $0.00000 $0.00960 $0.03235
+Small General Service / Street Lighting ALL $0.00097 $0.00798 $0.00002 ($0.00037) $0.00014 ($0.00055) ($0.00024) $0.00098 $0.00214 ($0.00071) $0.00000 $0.00672 $0.00742 $0.00000 $0.00742 $0.02450
+Medium General Service ALL $0.00061 $0.00588 $0.00001 ($0.00037) $0.00010 ($0.00040) ($0.00017) $0.00062 $0.00156 ($0.00052) $0.00000 $0.00489 $0.00546 $0.00000 $0.00546 $0.01767
+Large General Service ALL $0.00045 $0.00362 $0.00001 ($0.00037) $0.00006 ($0.00025) ($0.00010) $0.00045 $0.00095 ($0.00032) $0.00000 $0.00298 $0.00337 $0.00000 $0.00337 $0.01085
+Sector
+Service 
+Area
+Pension 
+Adjustment 
+Factor 
+(PAF)
+Residential 
+Assistance 
+Adjustment 
+Factor
+(RAAF)
+Attorney 
+General 
+Consulting 
+Expense
+(AGCE)
+Long Term 
+Renewable 
+Contract 
+Adjustment
+(LTRCA)
+Solar 
+Program Cost 
+Adjustment 
+Factor
+(SPCA) Total
+Basic Service 
+Cost True Up 
+Factor
+(BSTF)
+Solar 
+Expansion 
+Cost Recovery 
+Factor
+(SECRF)
+Vegetation 
+Management 
+(RTWF)
+Grid 
+Modernization 
+Factor (GMF) 
+Tax Act 
+Credit Factor 
+(TACF)
+Storm Recovery Adjustment
+Electronic 
+Payment 
+Recovery 
+(EPR)
+Issued by: Douglas W. Foley
+                   President 
+Filed:  August 25, 2026
+ Effective:  Sept 1, 2026
+
+NSTAR ELECTRIC COMPANY
+d/b/a EVERSOURCE ENERGY
+SUMMARY OF ELECTRIC SERVICE DELIVERY RATES
+M.D.P.U. No. 1-26-F
+Page 6 of 7
+PART C - BASIC SERVICE RATES*
+All Rates are in $/kWh across all hours and usage levels
+Sector Service Area Zone Type 1-Jan-26 1-Feb-26 1-Mar-26 1-Apr-26 1-May-26 1-Jun-26 1-Jul-26 1-Aug-26 1-Sep-26 1-Oct-26 1-Nov-26 1-Dec-26 1-Jan-27 Last Change
+Residential EMA NEMA/SEMA Fixed 0.14884$   0.15629$   0.15629$   0.15629$   0.15629$   0.15629$   0.15629$   0.17323$   0.17323$   0.17323$   0.17323$   0.17323$   0.17323$   8/1/26
+EMA NEMA/SEMA Variable 0.21974$   0.21618$   0.15208$   0.13302$   0.12538$   0.13062$   0.16217$   0.14255$   0.12888$   0.13002$   0.14815$   0.21054$   0.25510$   8/1/26
+WMA WCMA Fixed 0.13493$   0.13683$   0.13683$   0.13683$   0.13683$   0.13683$   0.13683$   0.15934$   0.15934$   0.15934$   0.15934$   0.15934$   0.15934$   8/1/26
+WMA WCMA Variable 0.18638$   0.18025$   0.13312$   0.12093$   0.11454$   0.11848$   0.14040$   0.13191$   0.11620$   0.11617$   0.13346$   0.19419$   0.23742$   8/1/26
+Small General Service EMA NEMA/SEMA Fixed 0.15150$   0.15030$   0.15030$   0.15030$   0.15030$   0.15030$   0.15030$   0.16761$   0.16761$   0.16761$   0.16761$   0.16761$   0.16761$   8/1/26
+EMA NEMA/SEMA Variable 0.23615$   0.20955$   0.14503$   0.12399$   0.11751$   0.12754$   0.15890$   0.13509$   0.11933$   0.11866$   0.14137$   0.20837$   0.25636$   8/1/26
+WMA WCMA Fixed 0.13271$   0.13634$   0.13634$   0.13634$   0.13634$   0.13634$   0.13634$   0.15604$   0.15604$   0.15604$   0.15604$   0.15604$   0.15604$   8/1/26
+WMA WCMA Variable 0.20042$   0.18954$   0.13306$   0.11514$   0.10800$   0.11677$   0.14216$   0.12870$   0.11228$   0.10977$   0.13149$   0.19277$   0.24195$   8/1/26
+Medium and Large EMA NEMA Fixed 0.18127$   0.17893$   0.17893$   0.17893$   0.12541$   0.12541$   0.12541$   0.12031$   0.12031$   0.12031$   0.22190$   0.22190$   0.22190$   11/1/26
+General Service EMA NEMA Variable 0.22076$   0.22516$   0.16099$   0.13754$   0.10691$   0.11358$   0.14980$   0.12703$   0.11217$   0.12062$   0.13698$   0.22000$   0.28634$   11/1/26
+EMA SEMA Fixed 0.18037$   0.16290$   0.16290$   0.16290$   0.11825$   0.11825$   0.11825$   0.11578$   0.11578$   0.11578$   0.22228$   0.22228$   0.22228$   11/1/26
+EMA SEMA Variable 0.22038$   0.21099$   0.14068$   0.12443$   0.09822$   0.10631$   0.14388$   0.12354$   0.10696$   0.11547$   0.14118$   0.22253$   0.28222$   11/1/26
+WMA WCMA Fixed 0.16382$   0.14630$   0.14630$   0.14630$   0.11169$   0.11169$   0.11169$   0.11830$   0.11830$   0.11830$   0.20706$   0.20706$   0.20706$   11/1/26
+WMA WCMA Variable 0.21127$   0.18940$   0.13153$   0.11916$   0.09506$   0.10592$   0.13602$   0.12881$   0.11208$   0.11421$   0.12504$   0.22754$   0.28942$   11/1/26
+Street Lighting EMA NEMA/SEMA Fixed 0.15150$   0.15030$   0.15030$   0.15030$   0.15030$   0.15030$   0.15030$   0.16761$   0.16761$   0.16761$   0.16761$   0.16761$   0.16761$   8/1/26
+EMA NEMA/SEMA Variable 0.23615$   0.20955$   0.14503$   0.12399$   0.11751$   0.12754$   0.15890$   0.13509$   0.11933$   0.11866$   0.14137$   0.20837$   0.25636$   8/1/26
+WMA WCMA Fixed 0.11689$   0.12070$   0.12070$   0.12070$   0.12070$   0.12070$   0.12070$   0.14330$   0.14330$   0.14330$   0.14330$   0.14330$   0.14330$   8/1/26
+WMA WCMA Variable 0.17310$   0.16824$   0.12027$   0.10225$   0.09575$   0.10277$   0.12375$   0.11290$   0.10016$   0.09876$   0.12070$   0.18054$   0.22816$   8/1/26
+* January 2026: Includes the Basic Service Cost Adjustment of $0.00127 per kWh
+  February 2026 to July 2026: Includes the Basic Service Cost Adjustment of $0.00691 per kWh
+Issued by: Douglas W. Foley
+                   President 
+Filed:  August 25, 2026
+ Effective:  Sept 1, 2026
+
+NSTAR ELECTRIC COMPANY
+d/b/a EVERSOURCE ENERGY
+SUMMARY OF ELECTRIC SERVICE DELIVERY RATES
+M.D.P.U. No. 1-26-F
+Page 7 of 7
+PART D - APPENDIX
+Service Territories/Areas Description
+ALL Eastern Massachusetts and Western Massachusetts
+EMA Eastern Massachusetts
+WMA Western Massachusetts
+BOST Greater Boston service area
+CAMB Cambridge service area
+SOUTH South Shore service area
+CAPE Cape Cod and Martha's Vineyard service area where the Energy Efficiency rate is charged by Cape Light Compact
+Zones Description
+NEMA Northeast Massachusetts (Eastern Massachusetts service territory)
+SEMA Southeast Massachusetts (Eastern Massachusetts service territory)
+WCMA West/Central Massachusetts (Western Massachusetts service territory)
+Sectors Rates MDPU No. Service Area
+Residential R-1 Residential 7 ALL
+R-1HP Residential Heat Pump Service 85 ALL
+R-2 Residential Assistance 8 ALL
+R-2HP Residential Assistance Heat Pump Service 86 ALL
+R-3 Residential Space Heating 9 ALL
+R-4 Residential Space Heating Assistance 10 ALL
+Small General Service G-1 Small General Service 11 BOST
+T-1 Optional Time of Use (Closed) 14 BOST
+G-1 Small General Service 19 CAMB
+G-5 Commercial Space Heating (Closed) 23 CAMB
+G-6 Optional Time of Use (Closed) 24 CAMB
+G-1 Small General Service 29 SOUTH
+G-4 General Power (Closed) 32 SOUTH
+G-6 All Electric Schools (Closed) 34 SOUTH
+G-7 Optional General Time of Use (Closed) 35 SOUTH
+23 Optional Water Heating (Closed) 36 WMA
+24 Optional Church (Closed) 37 WMA
+G-1 Small General Service 38 WMA
+Medium General Service G-2 Medium General Service 15 BOST
+G-2 Medium General Service 20 CAMB
+G-2 Medium General Service 30 SOUTH
+G-2 Medium General Service 40 WMA
+T-4 Optional Medium General Service Time of Use 41 WMA
+EV-2 Optional Electric Vehicle Charging 79 ALL
+Large General Service G-3 Large General Service 13 BOST
+WR MWRA 16 BOST
+G-3 Large General Service 21 CAMB
+G-3 Large General Service 31 SOUTH
+G-3 Large General Service 42 WMA
+T-5 Extra Large General Service 43 WMA
+Street Lighting S-1 Street and Security Lighting 44 ALL
+S-2 Street and Security Lighting-Customer Owned 45 ALL
+Issued by: Douglas W. Foley
+                   President 
+Filed:  August 25, 2026
+ Effective:  Sept 1, 2026

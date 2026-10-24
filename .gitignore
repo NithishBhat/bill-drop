@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Never commit AWS keys
+.streamlit/secrets.toml
+.env
