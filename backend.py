@@ -32,6 +32,14 @@ BILL_SCHEMA = {
         "total_cost": {"type": ["number", "null"], "description": "Total amount due for this period's electricity charges, in dollars"},
         "supply_rate_per_kwh": {"type": ["number", "null"], "description": "Supply/generation price in $/kWh, e.g. 0.17323 (NOT cents)"},
         "supplier": {"type": ["string", "null"], "description": "Who supplies the electricity, e.g. 'Basic Service', 'Boston Community Choice Electricity'"},
+        # Enrollment-form fields (used by assisted_fill.py for the BCCE sign-up form).
+        "name_on_account": {"type": ["string", "null"], "description": "Customer name as printed on the bill"},
+        "service_street": {"type": ["string", "null"], "description": "Service address street line, e.g. '110 Example St Apt 2'"},
+        "service_city": {"type": ["string", "null"]},
+        "service_zip": {"type": ["string", "null"], "description": "5-digit ZIP"},
+        "service_reference_number": {"type": ["string", "null"], "description": "Eversource 'Service Reference' number (8 digits, page 2 under the meter number)"},
+        "meter_number": {"type": ["string", "null"]},
+        "customer_name_key": {"type": ["string", "null"], "description": "Eversource customer name key: 4 capital letters, often unlabeled, top left of page 2 below the account number"},
         "monthly_kwh_history": {
             "type": "array",
             "description": "Usage history chart on the bill, oldest first. Empty list if the bill has none.",
@@ -46,13 +54,16 @@ BILL_SCHEMA = {
         },
     },
     "required": ["utility", "account_number", "billing_start", "billing_end", "kwh_used",
-                 "total_cost", "supply_rate_per_kwh", "supplier", "monthly_kwh_history"],
+                 "total_cost", "supply_rate_per_kwh", "supplier", "name_on_account", "service_street",
+                 "service_city", "service_zip", "service_reference_number", "meter_number",
+                 "customer_name_key", "monthly_kwh_history"],
 }
 
 READ_PROMPT = """This is a Massachusetts residential electricity bill. Extract the fields with the save_bill tool.
 - Copy numbers exactly as printed. Use null for anything not on the bill; never guess.
 - supply_rate_per_kwh is the Supply/Generation charge per kWh in dollars (convert cents to dollars).
-- If there's a usage history bar chart, read each month's kWh as best you can."""
+- If there's a usage history bar chart, read each month's kWh as best you can.
+- Copy account, service reference and meter numbers exactly, including leading zeros (as strings)."""
 
 # What the model fills in for find_savings. supply_switch ideas give a new rate and
 # Python does the math; other ideas give the model's estimate from the KB docs.
@@ -218,6 +229,7 @@ def find_savings(bill):
         link = idea.get("link")
         if link and not link.startswith("http"):
             link = "https://" + link
+        new_rate = None
         if idea["kind"] == "supply_switch":
             new_rate = idea.get("new_supply_rate_per_kwh")
             if not (new_rate and current_rate and new_rate < current_rate):
@@ -231,6 +243,8 @@ def find_savings(bill):
             "why": idea["why"],
             "yearly_savings": round(savings, 2),
             "link": link,
+            # Supply switches only; assisted_fill.py uses it to pick the BCCE plan.
+            "new_supply_rate_per_kwh": new_rate,
         }
         if idea["kind"] == "supply_switch":
             if best_switch is None or rec["yearly_savings"] > best_switch["yearly_savings"]:

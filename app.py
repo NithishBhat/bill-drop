@@ -2,10 +2,12 @@
 
 Run with:  streamlit run app.py
 """
+import html
 from pathlib import Path
 
 import streamlit as st
 
+from assisted_fill import BCCE_FORM_URL, bcce_plan, bookmarklet_url, form_fields, missing_fields
 from backend import ask, find_savings, read_bill
 
 SAMPLE_BILL = Path(__file__).parent / "sample_bills" / "sample_eversource_bill.png"
@@ -96,6 +98,47 @@ if st.session_state.result:
             if rec["link"]:
                 st.link_button("Learn more / sign up", rec["link"])
 
+    # ------------------------------------------------------------ assisted enrollment
+    plan = bcce_plan(savings)
+    if plan and "eversource" in (bill["utility"] or "").lower():
+        plan_id, plan_name, plan_rate = plan
+        fields = form_fields(bill, plan_id)
+        st.subheader("✍️ Sign up for BCCE in one click")
+        st.write(f"We can fill the City of Boston's enrollment form with your bill details "
+                 f"for **BCCE {plan_name}** (\\${plan_rate}/kWh). You check it and submit it yourself.")
+        st.markdown(
+            "1. **Drag** the green button below to your bookmarks bar (one time).\n"
+            "2. **Open the BCCE form** with the button on the right.\n"
+            "3. On the form, **click the bookmark**. Your bill details fill in and are highlighted.\n"
+            "4. **Check every field**, add your **email and phone**, then click **Submit** "
+            "and complete the reCAPTCHA. Nothing is submitted for you."
+        )
+        drag_col, open_col = st.columns(2)
+        with drag_col:
+            # Rendered in an iframe so Streamlit doesn't strip the javascript: link. Bill values
+            # are percent-encoded inside the URL, so they can't inject HTML here.
+            st.iframe(
+                f'<a href="{html.escape(bookmarklet_url(fields))}" title="Drag me to your bookmarks bar" '
+                'onclick="alert(\'Drag this button to your bookmarks bar, then click it on the BCCE form.\');return false;" '
+                'style="display:block;text-align:center;background:#2e7d32;color:#fff;padding:10px 14px;'
+                'border-radius:8px;font:600 15px sans-serif;text-decoration:none;cursor:grab">'
+                '⚡ Fill BCCE form</a>',
+                height=50,
+            )
+        with open_col:
+            st.link_button("Open the BCCE form ↗", BCCE_FORM_URL, use_container_width=True)
+
+        missing = missing_fields(fields)
+        if missing:
+            st.warning("Not on your bill, so you'll type these yourself: " + ", ".join(missing))
+        st.caption("Boston residents on Eversource only. The bookmark contains your account details, "
+                   "so delete it once you've enrolled.")
+        with st.expander("On a phone? Copy the values instead"):
+            for f in fields:
+                if f["kind"] == "text" and f["value"] and not f["label"].startswith("Re-enter"):
+                    st.caption(f["label"])
+                    st.code(f["value"], language=None)
+
     with st.expander("What we read from your bill"):
         def shown(value, fmt="{}"):
             return "Not shown on bill" if value is None else fmt.format(value)
@@ -108,6 +151,12 @@ if st.session_state.result:
             ("Amount due", shown(bill["total_cost"], "${:,.2f}")),
             ("Supply rate", shown(bill["supply_rate_per_kwh"], "${:.5f}/kWh")),
             ("Supplier", shown(bill["supplier"])),
+            ("Name on account", shown(bill.get("name_on_account"))),
+            ("Service address", shown(", ".join(p for p in (bill.get("service_street"), bill.get("service_city"),
+                                                            bill.get("service_zip")) if p) or None)),
+            ("Service reference #", shown(bill.get("service_reference_number"))),
+            ("Meter number", shown(bill.get("meter_number"))),
+            ("Customer name key", shown(bill.get("customer_name_key"))),
         ]
         st.dataframe([{"Item": k, "From your bill": v} for k, v in details],
                      hide_index=True, width="stretch")
