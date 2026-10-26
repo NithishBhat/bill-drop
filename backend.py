@@ -15,7 +15,8 @@ import boto3
 REGION = "us-east-1"
 # Override with BILL_MODEL_ID=us.amazon.nova-pro-v1:0 if Claude access isn't approved yet.
 MODEL_ID = os.environ.get("BILL_MODEL_ID", "us.anthropic.claude-sonnet-4-5-20250929-v1:0")
-KNOWLEDGE_BASE_ID = "ZK6VSBXXCK"
+# Set by Terraform on the server (`terraform output knowledge_base_id` for local runs).
+KNOWLEDGE_BASE_ID = os.environ.get("KNOWLEDGE_BASE_ID", "")
 
 _bedrock = boto3.client("bedrock-runtime", region_name=REGION)
 _kb = boto3.client("bedrock-agent-runtime", region_name=REGION)
@@ -179,6 +180,8 @@ def _winter_vs_summer(bill):
 
 def _search_kb(query, n=4):
     """Return [(chunk_text, source_file_name), ...] from the Knowledge Base."""
+    if not KNOWLEDGE_BASE_ID:
+        raise RuntimeError("KNOWLEDGE_BASE_ID is not set. Run `terraform output knowledge_base_id` in infra/.")
     resp = _kb.retrieve(
         knowledgeBaseId=KNOWLEDGE_BASE_ID,
         retrievalQuery={"text": query},

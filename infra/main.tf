@@ -3,11 +3,15 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "6.20.0"
+      version = "6.70.0" # S3 Vectors + Knowledge Base on S3 Vectors need >= 6.2x
     }
     archive = {
       source  = "hashicorp/archive"
       version = "2.7.1"
+    }
+    time = {
+      source  = "hashicorp/time"
+      version = "0.13.1"
     }
   }
 }
@@ -78,7 +82,7 @@ data "aws_iam_policy_document" "app" {
   statement {
     sid       = "QueryKnowledgeBase"
     actions   = ["bedrock:Retrieve"]
-    resources = ["arn:aws:bedrock:${var.region}:${data.aws_caller_identity.me.account_id}:knowledge-base/${var.knowledge_base_id}"]
+    resources = [aws_bedrockagent_knowledge_base.kb.arn]
   }
   statement {
     sid       = "ReadAppBundle"
@@ -152,6 +156,7 @@ resource "aws_instance" "app" {
     region = var.region
     bucket = aws_s3_bucket.artifacts.id
     key    = aws_s3_object.app.key
+    kb_id  = aws_bedrockagent_knowledge_base.kb.id
   })
   # New code -> new bundle key -> new instance (the Elastic IP keeps the URL stable).
   user_data_replace_on_change = true

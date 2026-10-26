@@ -14,4 +14,4 @@ unzip -o app.zip
 docker build -t bill-drop .
 docker rm -f bill-drop || true
 docker run -d --name bill-drop --restart unless-stopped \
-  -p 80:8501 -e AWS_REGION="${region}" bill-drop
+  -p 80:8501 -e AWS_REGION="${region}" -e KNOWLEDGE_BASE_ID="${kb_id}" bill-drop

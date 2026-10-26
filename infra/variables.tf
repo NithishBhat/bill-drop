@@ -33,9 +33,3 @@ variable "model_id" {
   type        = string
   default     = "us.anthropic.claude-sonnet-4-5-20250929-v1:0"
 }
-
-variable "knowledge_base_id" {
-  description = "Bedrock Knowledge Base used by backend.py."
-  type        = string
-  default     = "ZK6VSBXXCK"
-}

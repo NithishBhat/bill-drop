@@ -50,21 +50,23 @@ Browser ──► Streamlit app (app.py) on EC2 (Docker)
 ```
 - **Structured output:** the model answers through a forced tool call with a JSON schema, so the
   frontend always gets the exact keys it expects.
-- **Deployment:** Terraform in `infra/` (EC2 c7i-flex.large, least-privilege IAM role limited to
-  Claude + this Knowledge Base, SSM instead of SSH, IMDSv2, encrypted disk, Elastic IP).
+- **Infrastructure as code:** Terraform in `infra/` builds *everything*: the docs bucket, S3 Vectors
+  index, Bedrock Knowledge Base and its sync, and the EC2 server (c7i-flex.large, least-privilege IAM
+  role limited to Claude + this Knowledge Base, SSM instead of SSH, IMDSv2, encrypted disk, Elastic IP).
 
 ## Run it locally
-Requirements: Python 3.13, an AWS account with Bedrock access to Claude Sonnet 4.5 in `us-east-1`.
+Requirements: Python 3.13, an AWS account with Bedrock access to Claude Sonnet 4.5 in `us-east-1`,
+and a Knowledge Base (run `terraform apply` once, see [Deploy](#deploy)).
 ```bash
 python -m venv .venv
 .venv/Scripts/pip install -r requirements.txt     # macOS/Linux: .venv/bin/pip
 aws login                                          # or any AWS credentials
+export KNOWLEDGE_BASE_ID=$(terraform -chdir=infra output -raw knowledge_base_id)
 .venv/Scripts/streamlit run app.py
 ```
 - **Model:** set `BILL_MODEL_ID` to use another Bedrock model (e.g. `us.amazon.nova-pro-v1:0`).
-- **Your own Knowledge Base:** upload `kb-docs/upload/` to an S3 bucket, create a Bedrock Knowledge
-  Base on it (Titan Text Embeddings V2, S3 Vectors), sync it, and set `KNOWLEDGE_BASE_ID` in `backend.py`.
-- **Refresh supplier offers:** `python scripts/fetch_energyswitch.py 02130`
+- **Refresh supplier offers:** `python scripts/fetch_energyswitch.py 02130`, then `terraform apply`
+  uploads the changed docs and re-syncs the Knowledge Base.
 
 ## Tests
 ```bash
@@ -77,12 +79,19 @@ plan switch counted, 12-month usage used when available) and for the form-fill b
 addresses containing quotes, `</script>` or `%` can't break or inject into the script).
 
 ## Deploy
+One command builds the whole stack from scratch (docs bucket, vector store, Knowledge Base + sync,
+IAM roles, server). The app is live about 3 minutes later at the `url` it prints.
 ```bash
 cd infra
+terraform init
 eval "$(aws configure export-credentials --format env)"   # Terraform can't read `aws login` directly
-terraform apply                                            # app is up ~2 minutes later
-terraform destroy                                          # tear down when done
+terraform apply                                            # prints url and knowledge_base_id
+terraform destroy                                          # removes everything it created
 ```
+Prerequisites: Terraform ≥ 1.6, the AWS CLI (used to start the Knowledge Base sync), and Bedrock model
+access to Claude Sonnet 4.5 in `us-east-1`. On a new AWS account, submit Anthropic's one-time use-case
+form in the Bedrock console first. Accounts on the AWS Free Tier plan can only launch some instance types.
+`c7i-flex.large` (default) and `t4g.small` (set `instance_type` and `arch = "arm64"`) both work.
 
 ## How we used Kiro
 - **Spec-driven development:** `.kiro/specs/bedrock-backend-integration/` contains the requirements Kiro wrote
