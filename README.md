@@ -1,6 +1,9 @@
 # ⚡ Bill Drop
 
-**Live demo: http://184.194.99.87**: click **"Try a sample bill"** to see it work without uploading anything.
+**Want to try it?** The hosted demo has been shut down to save costs, but it can be redeployed to AWS
+in about 5 minutes with one `terraform apply` (see [Deploy](#deploy)). If you're a recruiter and would
+like a live demo, reach out through my GitHub profile and I'll spin it up. Once it's running, click
+**"Try a sample bill"** to see it work without uploading anything.
 
 Bill Drop reads a Massachusetts electricity bill, finds a cheaper supply plan and the Mass Save
 rebates that fit the home, shows the yearly savings, and fills in the City of Boston's sign-up form
@@ -105,6 +108,6 @@ summarized from published offer pages. Check current amounts on masssave.com.
 
 ## Privacy & limitations
 - Bills are processed in memory to produce results. They aren't written to disk or a database.
-- The demo runs over **HTTP, not HTTPS**. Use the sample bill rather than a real one on the public demo.
+- The deployed demo runs over **HTTP, not HTTPS**. Use the sample bill rather than a real one.
 - The sign-up helper bookmark contains your account details. Delete it after enrolling.
 - BCCE is only for Eversource customers in the City of Boston. Rates are as of October 2026.
